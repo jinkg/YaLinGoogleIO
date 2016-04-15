@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".welcome.WelcomeActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/welcome_appbar_height"
+        android:background="@color/colorPrimary"
+        android:paddingBottom="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/welcome_image_width"
+            android:layout_height="@dimen/welcome_image_height"
+            android:layout_gravity="center"
+            android:src="@drawable/io_logo" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?actionBarSize"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/padding_normal"
+        android:paddingTop="@dimen/welcome_content_padding_top"
+        android:scrollbarStyle="outsideOverlay">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/welcome_content"
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="@dimen/padding_normal"
+            android:layout_marginStart="@dimen/padding_normal"
+            android:paddingTop="@dimen/spacing_normal"
+            app:cardBackgroundColor="@color/app_white"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:cardPreventCornerOverlap="false" />
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="@dimen/match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="bottom"
+        android:background="@color/app_white"
+        android:elevation="@dimen/welcome_button_bar_elevation">
+
+        <LinearLayout
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/button_decline"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/decline"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textColor="@color/app_body_text_2" />
+
+            <Button
+                android:id="@+id/button_accept"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/accept"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textColor="@color/app_body_text_2" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
