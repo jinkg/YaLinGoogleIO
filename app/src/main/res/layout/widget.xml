@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/widget_margin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|start"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="@string/app_name"
+            android:paddingBottom="@dimen/spacing_normal"
+            android:paddingEnd="@dimen/spacing_normal"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/spacing_normal"
+            android:paddingStart="@dimen/padding_normal"
+            android:paddingTop="@dimen/spacing_normal"
+            android:scaleType="fitStart"
+            android:src="@drawable/actionbar_icon" />
+
+        <ImageButton
+            android:layout_width="@dimen/action_button_min_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="@string/description_refresh"
+            android:scaleType="center"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/widget_schedule_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/card"
+            android:cacheColorHint="@color/card"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@drawable/schedule_item_touch_overlay"
+            android:paddingTop="@dimen/spacing_normal" />
+
+        <TextView
+            android:id="@android:id/empty"
+            style="@style/EmptyText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/empty_widget_text"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

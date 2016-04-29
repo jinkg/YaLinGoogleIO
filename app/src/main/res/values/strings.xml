@@ -7,4 +7,7 @@
     <string name="cancel">Cancel</string>
     <string name="welcome_select_account_title">Select an account</string>
     <string name="welcome_select_account_text">Please choose an account to use:</string>
+    <string name="description_refresh">Refresh</string>
+    <string name="empty_widget_text">No more upcoming sessions.See you next year.</string>
+    <string name="live_now">LIVE NOW</string>
 </resources>

@@ -5,4 +5,9 @@
         <attr name="actionBarInsetStart" format="dimension" />
         <attr name="spinnerBarInsetStart" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="DrawShadowFrameLayout">
+        <attr name="shadowDrawable" format="reference" />
+        <attr name="shadowVisible" format="boolean" />
+    </declare-styleable>
 </resources>

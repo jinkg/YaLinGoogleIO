@@ -2,6 +2,8 @@ package com.yalin.googleio.welcome;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -41,10 +43,12 @@ public class AccountFragment extends WelcomeFragment implements WelcomeActivity.
     }
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mAccountManager = AccountManager.get(context);
-        mAccounts = new ArrayList<>(Arrays.asList(mAccountManager.getAccounts()));
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        mAccountManager = AccountManager.get(activity);
+//        mAccounts = new ArrayList<>(Arrays.asList(mAccountManager.getAccounts()));
+        Account account = new Account("YaLin", "Google");
+        mAccounts = new ArrayList<>(Arrays.asList(new Account[]{account}));
     }
 
     @Override

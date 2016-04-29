@@ -1,6 +1,8 @@
 package com.yalin.googleio.welcome;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +25,7 @@ import static com.yalin.googleio.util.LogUtils.makeLogTag;
  */
 public class WelcomeActivity extends AppCompatActivity implements WelcomeFragment.WelcomeFragmentContainer {
     private static final String TAG = makeLogTag(WelcomeActivity.class);
+    WelcomeActivityContent mContentFragment;
 
     public static Intent getOpenIntent(Activity activity) {
         return new Intent(activity, WelcomeActivity.class);
@@ -32,6 +35,15 @@ public class WelcomeActivity extends AppCompatActivity implements WelcomeFragmen
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        mContentFragment = getCurrentFragment(this);
+        if (mContentFragment == null) {
+            finish();
+            return;
+        }
+
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.welcome_content, (Fragment) mContentFragment);
+        fragmentTransaction.commit();
     }
 
     private static WelcomeActivityContent getCurrentFragment(Context context) {

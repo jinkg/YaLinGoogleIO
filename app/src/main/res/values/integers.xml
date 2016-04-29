@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="explore_topic_theme_onsite_max_item_count">2</integer>
+    <integer name="explore_theme_max_item_count_offsite">6</integer>
+</resources>

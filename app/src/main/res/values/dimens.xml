@@ -6,7 +6,7 @@
     <dimen name="spacing_normal">8dp</dimen>
     <dimen name="padding_normal">16dp</dimen>
 
-    <dimen name="keyline_2_minus_16dp">56dp</dimen>
+    <dimen name="key_line_2_minus_16dp">56dp</dimen>
 
     <item name="body_1_spacing" format="float" type="dimen">1.22448979592</item>
 
@@ -22,4 +22,17 @@
 
     <dimen name="card_corner_radius">2dp</dimen>
     <dimen name="card_elevation">2dp</dimen>
+    <dimen name="header_bar_elevation">4dp</dimen>
+
+    <dimen name="action_bar_auto_hide_min_y">152dp</dimen>
+    <dimen name="action_bar_auto_hide_sensitivity">48dp</dimen>
+
+    <dimen name="swipe_refresh_progress_bar_start_margin">-40dp</dimen>
+    <dimen name="swipe_refresh_progress_bar_end_margin">16dp</dimen>
+
+    <dimen name="widget_margin">0dp</dimen>
+
+    <dimen name="action_button_min_width">56dp</dimen>
+
+    <dimen name="text_size_large">18sp</dimen>
 </resources>
