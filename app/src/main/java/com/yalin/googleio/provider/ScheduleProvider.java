@@ -243,6 +243,11 @@ public class ScheduleProvider extends ContentProvider {
             case SESSIONS:
             case SPEAKERS:
                 return builder.table(matchingUriEnum.table);
+            case SESSIONS_ID: {
+                final String sessionId = Sessions.getSessionId(uri);
+                return builder.table(Tables.SESSIONS)
+                        .where(Sessions.SESSION_ID + "=?", sessionId);
+            }
             case SESSIONS_ID_SPEAKERS: {
                 final String sessionId = Sessions.getSessionId(uri);
                 return builder.table(Tables.SESSIONS_SPEAKERS)

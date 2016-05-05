@@ -23,6 +23,12 @@ android {
 
         buildConfigField("String", "BOOTSTRAP_DATA_TIMESTAMP", "\"${bootstrap_data_timestamp}\"")
         buildConfigField("String", "INPERSON_TIMEZONE", "\"${inperson_timezone}\"")
+        buildConfigField("String", "WIFI_SSID" ,"\"${wifi_ssid}\"")
+        buildConfigField("String", "WIFI_PASSPHRASE" ,"\"${wifi_passphrase}\"")
+        buildConfigField("String", "CONFERENCE_DAY1_START", "\"${conference_day1_start}\"")
+        buildConfigField("String", "CONFERENCE_DAY1_END", "\"${conference_day1_end}\"")
+        buildConfigField("String", "CONFERENCE_DAY2_START", "\"${conference_day2_start}\"")
+        buildConfigField("String", "CONFERENCE_DAY2_END", "\"${conference_day2_end}\"")
     }
     buildTypes {
         release {

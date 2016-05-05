@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message_card_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/padding_normal"
+    android:paddingStart="@dimen/padding_normal"
+    android:paddingTop="@dimen/padding_normal">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/explore_io_message_card_image_width"
+        android:layout_height="@dimen/explore_io_message_card_image_width"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/padding_normal"
+        android:layout_marginRight="@dimen/padding_normal"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/Body1Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_normal"
+        android:layout_marginEnd="@dimen/padding_normal"
+        android:layout_marginRight="@dimen/padding_normal"
+        android:layout_toEndOf="@+id/icon"
+        android:layout_toRightOf="@+id/icon"
+        tools:text="@string/placeholder_lorem_ipsum" />
+
+    <Button
+        android:id="@+id/buttonEnd"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/description"
+        android:layout_marginEnd="@dimen/spacing_normal"
+        android:layout_marginLeft="@dimen/spacing_micro"
+        android:layout_marginRight="@dimen/spacing_normal"
+        android:layout_marginStart="@dimen/spacing_micro"
+        android:fontFamily="sans-serif"
+        android:minWidth="@dimen/explore_io_message_card_min_button_width"
+        android:paddingEnd="@dimen/spacing_normal"
+        android:paddingLeft="@dimen/spacing_normal"
+        android:paddingRight="@dimen/spacing_normal"
+        android:paddingStart="@dimen/spacing_normal"
+        android:textAllCaps="true"
+        android:textColor="@color/flat_button_text"
+        android:textSize="@dimen/text_size_medium"
+        tools:text="Button End" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/buttonEnd"
+        android:layout_toLeftOf="@+id/buttonEnd"
+        android:layout_toStartOf="@+id/buttonEnd"
+        android:fontFamily="sans-serif"
+        android:minWidth="@dimen/explore_io_message_card_min_button_width"
+        android:paddingEnd="@dimen/spacing_normal"
+        android:paddingLeft="@dimen/spacing_normal"
+        android:paddingRight="@dimen/spacing_normal"
+        android:paddingStart="@dimen/spacing_normal"
+        android:textAllCaps="true"
+        android:textColor="@color/flat_button_text"
+        android:textSize="@dimen/text_size_medium"
+        tools:text="Button Start" />
+</RelativeLayout>

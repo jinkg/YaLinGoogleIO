@@ -3,8 +3,16 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="spacing_micro">4dp</dimen>
     <dimen name="spacing_normal">8dp</dimen>
     <dimen name="padding_normal">16dp</dimen>
+
+    <dimen name="app_text_size_xsmall">11sp</dimen>
+    <dimen name="app_text_size_small">12sp</dimen>
+    <dimen name="app_text_size_medium">14sp</dimen>
+    <dimen name="app_text_size_large">18sp</dimen>
+    <dimen name="app_text_size_xlarge">20sp</dimen>
+    <dimen name="app_text_size_diff_large_small">6sp</dimen>
 
     <dimen name="key_line_2_minus_16dp">56dp</dimen>
 
@@ -23,6 +31,8 @@
     <dimen name="card_corner_radius">2dp</dimen>
     <dimen name="card_elevation">2dp</dimen>
     <dimen name="header_bar_elevation">4dp</dimen>
+    <dimen name="card_header_height">48dp</dimen>
+    <dimen name="stream_card_corner_radius">0dp</dimen>
 
     <dimen name="action_bar_auto_hide_min_y">152dp</dimen>
     <dimen name="action_bar_auto_hide_sensitivity">48dp</dimen>
@@ -34,5 +44,24 @@
 
     <dimen name="action_button_min_width">56dp</dimen>
 
+    <dimen name="text_size_xsmall">11sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_body">13sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
     <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+
+    <item name="aspect_16_9" format="float" type="dimen">1.7778</item>
+    <item name="aspect_4_3" format="float" type="dimen">1.3333</item>
+    <item name="aspect_phi" format="float" type="dimen">1.618</item>
+
+    <dimen name="explore_io_message_card_image_width">56dp</dimen>
+    <dimen name="explore_io_message_card_min_button_width">48dp</dimen>
+    <dimen name="explore_io_keynote_card_desc_padding">4dp</dimen>
+    <dimen name="explore_io_keynote_card_padding_top">16dp</dimen>
+    <dimen name="explore_io_keynote_card_padding_bottom">16dp</dimen>
+    <dimen name="explore_io_keynote_card_padding_start">16dp</dimen>
+    <dimen name="explore_io_keynote_card_padding_end">16dp</dimen>
+    <dimen name="explore_io_theme_cards_session_image_width">112dp</dimen>
+
 </resources>

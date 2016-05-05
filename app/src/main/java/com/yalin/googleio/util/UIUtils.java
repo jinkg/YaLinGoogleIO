@@ -3,7 +3,9 @@ package com.yalin.googleio.util;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.os.Build;
 import android.provider.Settings;
+import android.view.View;
 
 import com.yalin.googleio.BuildConfig;
 import com.yalin.googleio.R;
@@ -48,6 +50,15 @@ public class UIUtils {
                     + System.currentTimeMillis() - sAppLoadTime;
         } else {
             return System.currentTimeMillis();
+        }
+    }
+
+    public static void setAccessibilityIgnore(View view) {
+        view.setClickable(false);
+        view.setFocusable(false);
+        view.setContentDescription("");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            view.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
         }
     }
 }

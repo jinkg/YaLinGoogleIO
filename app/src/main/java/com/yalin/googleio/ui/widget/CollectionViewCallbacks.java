@@ -15,6 +15,9 @@ public interface CollectionViewCallbacks {
 
     View newCollectionItemView(Context context, int groupId, ViewGroup parent);
 
-    void bindCollectionItemView(Context context,View view,int groupId,int indexInGroup,int dataIndex,Object tag);
+    void bindCollectionItemView(Context context, View view, int groupId, int indexInGroup, int dataIndex, Object tag);
 
+    interface GroupCollectionViewCallbacks extends CollectionViewCallbacks {
+        ViewGroup newCollectionGroupView(Context context, int groupId, CollectionView.InventoryGroup group, ViewGroup parent);
+    }
 }

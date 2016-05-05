@@ -103,6 +103,7 @@ public class BaseActivity extends AppCompatActivity implements LoginAndAuthHelpe
             ab.setDisplayHomeAsUpEnabled(true);
         }
 
+        mLUtils = LUtils.getInstance(this);
         mThemedStatusBarColor = getResources().getColor(R.color.colorPrimaryDark);
         mNormalStatusBarColor = mThemedStatusBarColor;
     }
@@ -241,7 +242,7 @@ public class BaseActivity extends AppCompatActivity implements LoginAndAuthHelpe
         initActionBarAutoHide();
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             private Map<Integer, Integer> heights = new HashMap<>();
-            private int lastCurrentScroolY = 0;
+            private int lastCurrentScrollY = 0;
 
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
@@ -261,9 +262,9 @@ public class BaseActivity extends AppCompatActivity implements LoginAndAuthHelpe
                 }
                 int currentScrollY = previousItemsHeight - firstVisibleItemView.getTop()
                         + view.getPaddingTop();
-                onMainContentScrolled(currentScrollY, currentScrollY - lastCurrentScroolY);
+                onMainContentScrolled(currentScrollY, currentScrollY - lastCurrentScrollY);
 
-                lastCurrentScroolY = currentScrollY;
+                lastCurrentScrollY = currentScrollY;
             }
         });
     }

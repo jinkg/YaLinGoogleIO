@@ -14,4 +14,30 @@ public class ItemGroup {
     public void addSessionData(SessionData session) {
         sessions.add(session);
     }
+
+    public void trimSessionData(int sessionLimit) {
+        while (sessions.size() > sessionLimit) {
+            sessions.remove(0);
+        }
+    }
+
+    public String getId() {
+        return mId;
+    }
+
+    public void setId(String mId) {
+        this.mId = mId;
+    }
+
+    public String getTitle() {
+        return mTitle;
+    }
+
+    public void setTitle(String mTitle) {
+        this.mTitle = mTitle;
+    }
+
+    public ArrayList<SessionData> getSessions() {
+        return sessions;
+    }
 }

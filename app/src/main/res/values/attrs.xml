@@ -10,4 +10,13 @@
         <attr name="shadowDrawable" format="reference" />
         <attr name="shadowVisible" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="CollectionView">
+        <attr name="internalPadding" format="dimension" />
+        <attr name="contentTopClearance" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="AspectRatioView">
+        <attr name="aspectRatio" format="float" />
+    </declare-styleable>
 </resources>

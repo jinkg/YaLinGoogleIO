@@ -18,4 +18,11 @@
     <color name="body_text_1">#de000000</color>
     <color name="body_text_disabled">#44000000</color>
     <color name="default_session_color">@color/colorPrimary</color>
+
+    <color name="cyan_a700_plus">#ff006574</color>
+
+    <color name="more_button_text">@color/cyan_a700_plus</color>
+    <color name="more_button_background">#ffcfd8dc</color>
+
+    <color name="video_title">#de07434d</color>
 </resources>

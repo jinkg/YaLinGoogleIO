@@ -67,4 +67,51 @@ public class SessionData {
         return !TextUtils.isEmpty(youtubeUrl);
     }
 
+    public String getSessionName() {
+        return sessionName;
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
+    }
+
+    public String getSessionId() {
+        return sessionId;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public String getMainTag() {
+        return mainTag;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public String getLiveStreamId() {
+        return liveStreamId;
+    }
+
+    public String getYoutubeUrl() {
+        return youtubeUrl;
+    }
+
+    public String getTags() {
+        return tags;
+    }
+
+    public boolean isInSchedule() {
+        return inSchedule;
+    }
 }

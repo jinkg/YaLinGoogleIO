@@ -11,6 +11,7 @@ import android.text.TextUtils;
 
 import com.yalin.googleio.Config;
 import com.yalin.googleio.R;
+import com.yalin.googleio.explore.data.ItemGroup;
 import com.yalin.googleio.explore.data.LiveStreamData;
 import com.yalin.googleio.explore.data.SessionData;
 import com.yalin.googleio.explore.data.ThemeGroup;
@@ -20,13 +21,16 @@ import com.yalin.googleio.framework.QueryEnum;
 import com.yalin.googleio.framework.UserActionEnum;
 import com.yalin.googleio.provider.ScheduleContract;
 import com.yalin.googleio.provider.ScheduleContract.Sessions;
+import com.yalin.googleio.ui.widget.CollectionView;
 import com.yalin.googleio.util.SettingsUtils;
 import com.yalin.googleio.util.TimeUtils;
 import com.yalin.googleio.util.UIUtils;
 
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.StringTokenizer;
 
 import static com.yalin.googleio.util.LogUtils.LOGD;
 import static com.yalin.googleio.util.LogUtils.LOGE;
@@ -45,8 +49,36 @@ public class ExploreModel implements Model {
 
     private SessionData mKeynoteData;
 
+    private LiveStreamData mLiveStreamData;
+
+    private Map<String, TopicGroup> mTopics = new HashMap<>();
+
+    private Map<String, ThemeGroup> mThemes = new HashMap<>();
+
+    private Map<String, String> mTagTitles = new HashMap<>();
+
     public ExploreModel(Context context) {
         mContext = context;
+    }
+
+    public SessionData getKeynoteData() {
+        return mKeynoteData;
+    }
+
+    public LiveStreamData getLiveStreamData() {
+        return mLiveStreamData;
+    }
+
+    public Collection<TopicGroup> getTopics() {
+        return mTopics.values();
+    }
+
+    public Collection<ThemeGroup> getThemes() {
+        return mThemes.values();
+    }
+
+    public Map<String, String> getTagTitles() {
+        return mTagTitles;
     }
 
     @Override
@@ -95,10 +127,45 @@ public class ExploreModel implements Model {
                     }
 
                     if (!TextUtils.isEmpty(tags)) {
-
+                        StringTokenizer tagsTokenizer = new StringTokenizer(tags, ",");
+                        while (tagsTokenizer.hasMoreTokens()) {
+                            String rawTag = tagsTokenizer.nextToken();
+                            if (rawTag.startsWith("TOPIC_")) {
+                                TopicGroup topicGroup = topicGroups.get(rawTag);
+                                if (topicGroup == null) {
+                                    topicGroup = new TopicGroup();
+                                    topicGroup.setTitle(rawTag);
+                                    topicGroup.setId(rawTag);
+                                    topicGroups.put(rawTag, topicGroup);
+                                }
+                                topicGroup.addSessionData(session);
+                            } else if (rawTag.startsWith("THEME_")) {
+                                ThemeGroup themeGroup = themeGroups.get(rawTag);
+                                if (themeGroup == null) {
+                                    themeGroup = new ThemeGroup();
+                                    themeGroup.setTitle(rawTag);
+                                    themeGroup.setId(rawTag);
+                                    themeGroups.put(rawTag, themeGroup);
+                                }
+                                themeGroup.addSessionData(session);
+                            }
+                        }
                     }
                 } while (cursor.moveToNext());
             }
+
+            for (ItemGroup group : themeGroups.values()) {
+                group.trimSessionData(themeSessionLimit);
+            }
+            for (ItemGroup group : topicGroups.values()) {
+                group.trimSessionData(topicSessionLimit);
+            }
+            if (liveStreamData.getSessions().size() > 0) {
+                mLiveStreamData = liveStreamData;
+            }
+
+            mThemes = themeGroups;
+            mTopics = topicGroups;
             return true;
         } else if (query == ExploreQueryEnum.TAGS) {
             LOGW(TAG, "TAGS query loaded.");

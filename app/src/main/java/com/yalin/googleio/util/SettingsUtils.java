@@ -66,13 +66,23 @@ public class SettingsUtils {
         return sp.getLong(PREF_SUR_SYNC_INTERVAL, 0L);
     }
 
-    public static TimeZone getDisplayTimeZone(Context context) {
+    public static TimeZone getDisplayTimeZone(final Context context) {
         TimeZone defaultTz = TimeZone.getDefault();
         return (isUsingLocalTime(context) && defaultTz != null) ? defaultTz : Config.CONFERENCE_TIMEZONE;
     }
 
-    public static boolean isUsingLocalTime(Context context) {
+    public static boolean isUsingLocalTime(final Context context) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         return sp.getBoolean(PREF_LOCAL_TIMES, false);
+    }
+
+    public static boolean hasDeclinedWifiSetup(final Context context) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        return sp.getBoolean(PREF_DECLINED_WIFI_SETUP, false);
+    }
+
+    public static void markDeclinedWifiSetup(final Context context, boolean newValue) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        sp.edit().putBoolean(PREF_DECLINED_WIFI_SETUP, newValue).apply();
     }
 }
