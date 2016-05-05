@@ -330,7 +330,7 @@ public class ExploreIOFragment extends Fragment implements UpdatableView<Explore
         if (tag instanceof SessionData) {
             SessionData sessionData = (SessionData) tag;
             titleView.setText(sessionData.getSessionName());
-            if (TextUtils.isEmpty(sessionData.getImageUrl())) {
+            if (!TextUtils.isEmpty(sessionData.getImageUrl())) {
                 ImageView imageView = (ImageView) view.findViewById(R.id.thumbnail);
                 mImageLoader.loadImage(sessionData.getImageUrl(), imageView);
             }
