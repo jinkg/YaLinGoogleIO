@@ -15,7 +15,8 @@
     android:paddingLeft="@dimen/padding_normal"
     android:paddingRight="@dimen/padding_normal"
     android:paddingStart="@dimen/padding_normal"
-    android:paddingTop="@dimen/spacing_normal">
+    android:paddingTop="@dimen/spacing_normal"
+    tools:context=".explore.ExploreIOActivity">
 
     <com.yalin.googleio.ui.widget.AspectRatioView
         android:layout_width="@dimen/explore_io_theme_cards_session_image_width"

@@ -19,4 +19,8 @@
     <declare-styleable name="AspectRatioView">
         <attr name="aspectRatio" format="float" />
     </declare-styleable>
+
+    <declare-styleable name="ThemeYaLinIO">
+        <attr name="isFloatingWindow" format="boolean" />
+    </declare-styleable>
 </resources>

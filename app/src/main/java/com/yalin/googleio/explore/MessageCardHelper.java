@@ -55,7 +55,6 @@ public class MessageCardHelper {
             @Override
             public void onClick(View v) {
                 LOGD(TAG, "Marking wifi setup declined.");
-                SettingsUtils.markDeclinedWifiSetup(context, false);
                 SettingsUtils.markDeclinedWifiSetup(context, true);
             }
         });
@@ -64,7 +63,6 @@ public class MessageCardHelper {
             @Override
             public void onClick(View v) {
                 LOGD(TAG, "Installing conference wifi.");
-                SettingsUtils.markDeclinedWifiSetup(context, true);
                 SettingsUtils.markDeclinedWifiSetup(context, false);
             }
         });

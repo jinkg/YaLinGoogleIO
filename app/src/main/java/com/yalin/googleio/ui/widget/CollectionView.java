@@ -526,13 +526,13 @@ public class CollectionView extends ListView {
             return this;
         }
 
-        public InventoryGroup incrementItemCount() {
-            mItemCount++;
+        public InventoryGroup setItemTag(int index, Object tag) {
+            mItemTag.put(index, tag);
             return this;
         }
 
-        public InventoryGroup setItemTag(int index, Object tag) {
-            mItemTag.put(index, tag);
+        public InventoryGroup incrementItemCount() {
+            mItemCount++;
             return this;
         }
 

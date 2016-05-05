@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="false"
@@ -26,6 +27,31 @@
             android:name=".welcome.WelcomeActivity"
             android:exported="false"
             android:theme="@style/Theme.YaLinIO.Welcome" />
+
+        <activity
+            android:name=".session.SessionDetailActivity"
+            android:exported="true"
+            android:label="@string/title_session_detail"
+            android:theme="@style/Theme.YaLinIO.SessionDetails">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.yalinio.session" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".explore.ExploreSessionsActivity"
+            android:exported="true"
+            android:label="Explore"
+            android:theme="@style/Theme.YaLinIO.WithNavDrawer">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.yalinio.session" />
+            </intent-filter>
+
+        </activity>
 
         <service
             android:name=".service.DataBootstrapService"

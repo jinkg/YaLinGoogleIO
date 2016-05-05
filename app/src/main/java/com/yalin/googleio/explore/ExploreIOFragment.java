@@ -177,7 +177,9 @@ public class ExploreIOFragment extends Fragment implements UpdatableView<Explore
 
     @Override
     public void displayData(ExploreModel model, QueryEnum query) {
-        updateCollectionView(model);
+        if (model.getTagTitles() != null) {
+            updateCollectionView(model);
+        }
     }
 
     @Override

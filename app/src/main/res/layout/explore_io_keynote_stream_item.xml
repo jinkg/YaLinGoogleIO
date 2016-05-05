@@ -9,7 +9,8 @@
     android:focusable="true"
     android:foreground="?android:selectableItemBackground"
     android:onClick="sessionDetailItemClicked"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".explore.ExploreIOActivity">
 
     <com.yalin.googleio.ui.widget.AspectRatioView
         android:layout_width="match_parent"

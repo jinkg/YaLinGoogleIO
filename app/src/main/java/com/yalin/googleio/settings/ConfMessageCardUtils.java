@@ -3,7 +3,6 @@ package com.yalin.googleio.settings;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.annotation.BoolRes;
 import android.support.annotation.Nullable;
 
 import com.yalin.googleio.util.TimeUtils;

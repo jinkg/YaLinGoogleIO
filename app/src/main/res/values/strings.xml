@@ -3,6 +3,8 @@
     <string name="decline">Decline</string>
     <string name="accept">Accept</string>
 
+    <string name="title_session_detail">Session Information</string>
+
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="welcome_select_account_title">Select an account</string>
@@ -21,7 +23,9 @@
     <string name="more_item_button_desc_ally">Tap to show more items.</string>
     <string name="more_item_button_desc_with_label_ally">Tap to show more <xliff:g id="day">%1$s</xliff:g></string>
     <string name="more_items_button">More</string>
+
     <string name="session_in_schedule_indicator_ally">Session is in your schedule</string>
 
+    <string name="unknown_error">Whoops, we couldn\'t process that request.</string>
 
 </resources>

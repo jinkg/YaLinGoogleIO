@@ -21,7 +21,6 @@ import com.yalin.googleio.framework.QueryEnum;
 import com.yalin.googleio.framework.UserActionEnum;
 import com.yalin.googleio.provider.ScheduleContract;
 import com.yalin.googleio.provider.ScheduleContract.Sessions;
-import com.yalin.googleio.ui.widget.CollectionView;
 import com.yalin.googleio.util.SettingsUtils;
 import com.yalin.googleio.util.TimeUtils;
 import com.yalin.googleio.util.UIUtils;
@@ -55,7 +54,7 @@ public class ExploreModel implements Model {
 
     private Map<String, ThemeGroup> mThemes = new HashMap<>();
 
-    private Map<String, String> mTagTitles = new HashMap<>();
+    private Map<String, String> mTagTitles;
 
     public ExploreModel(Context context) {
         mContext = context;
@@ -169,6 +168,15 @@ public class ExploreModel implements Model {
             return true;
         } else if (query == ExploreQueryEnum.TAGS) {
             LOGW(TAG, "TAGS query loaded.");
+            Map<String, String> newTagTitles = new HashMap<>();
+            if (cursor != null && cursor.moveToFirst()) {
+                do {
+                    String tagId = cursor.getString(cursor.getColumnIndex(ScheduleContract.Tags.TAG_ID));
+                    String tagName = cursor.getString(cursor.getColumnIndex(ScheduleContract.Tags.TAG_NAME));
+                    newTagTitles.put(tagId, tagName);
+                } while (cursor.moveToNext());
+                mTagTitles = newTagTitles;
+            }
             return true;
         }
         return false;

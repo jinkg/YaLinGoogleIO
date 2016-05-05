@@ -215,6 +215,11 @@ public class ScheduleContract {
             return CONTENT_URI.buildUpon().appendPath(sessionId).appendPath(PATH_SPEAKERS).build();
         }
 
+        public static Uri buildSessionsAfterUri(long time) {
+            return CONTENT_URI.buildUpon().appendPath(PATH_AFTER)
+                    .appendPath(String.valueOf(time)).build();
+        }
+
         public static String getSessionId(Uri uri) {
             return uri.getPathSegments().get(1);
         }
