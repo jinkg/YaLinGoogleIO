@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="divider">#1f000000</color>
 
     <color name="background">#f5f5f5</color>
     <color name="light_grey">#fff0f0f0</color>
@@ -14,10 +15,23 @@
     <color name="text_on_primary">#ff004446</color>
     <color name="subtitle_on_primary">#de004446</color>
 
+    <color name="tab_background">@color/colorPrimary</color>
+    <color name="tab_selected_strip">@android:color/white</color>
+    <color name="unselected_tab_on_primary">#b3004446</color>
+
     <color name="card">#fff</color>
     <color name="body_text_1">#de000000</color>
     <color name="body_text_disabled">#44000000</color>
     <color name="default_session_color">@color/colorPrimary</color>
+    <color name="body_text_1_inverse">#deffffff</color>
+    <color name="body_text_2_inverse">#8affffff</color>
+
+    <color name="nav_drawer_background">#ffffffff</color>
+    <color name="nav_drawer_text_color">@color/body_text_1</color>
+    <color name="nav_drawer_text_color_selected">@color/cyan_a700_plus</color>
+    <color name="nav_drawer_selected_item_background">#1a000000</color>
+    <color name="nav_drawer_icon_tint">#444</color>
+    <color name="nav_drawer_icon_tint_selected">@color/cyan_a700_plus</color>
 
     <color name="cyan_a700_plus">#ff006574</color>
 
@@ -25,4 +39,5 @@
     <color name="more_button_background">#ffcfd8dc</color>
 
     <color name="video_title">#de07434d</color>
+
 </resources>

@@ -14,6 +14,8 @@
     <dimen name="app_text_size_xlarge">20sp</dimen>
     <dimen name="app_text_size_diff_large_small">6sp</dimen>
 
+    <dimen name="key_line_1">16dp</dimen>
+    <dimen name="key_line_2">72dp</dimen>
     <dimen name="key_line_2_minus_16dp">56dp</dimen>
 
     <item name="body_1_spacing" format="float" type="dimen">1.22448979592</item>
@@ -42,6 +44,8 @@
 
     <dimen name="widget_margin">0dp</dimen>
 
+    <dimen name="divider_height">1dp</dimen>
+
     <dimen name="action_button_min_width">56dp</dimen>
 
     <dimen name="text_size_xsmall">11sp</dimen>
@@ -55,6 +59,20 @@
     <item name="aspect_4_3" format="float" type="dimen">1.3333</item>
     <item name="aspect_phi" format="float" type="dimen">1.618</item>
 
+    <dimen name="nav_drawer_width">260dp</dimen>
+    <dimen name="nav_drawer_chosen_account_height">140dp</dimen>
+    <dimen name="nav_drawer_logo_vertical_padding">16dp</dimen>
+    <dimen name="nav_drawer_logo_padding_right">16dp</dimen>
+    <dimen name="nav_drawer_profile_image_size">40dp</dimen>
+    <dimen name="nav_drawer_item_icon_size">24dp</dimen>
+    <dimen name="nav_drawer_item_icon_margin_end">32dp</dimen>
+    <dimen name="nav_view_start_padding">16dp</dimen>
+    <dimen name="nav_view_end_padding">16dp</dimen>
+    <dimen name="nav_view_top_padding">16dp</dimen>
+    <dimen name="nav_view_header_bottom_padding">16dp</dimen>
+    <dimen name="nav_view_account_list_top_padding">8dp</dimen>
+    <dimen name="nav_view_menu_item_top_bottom_padding">8dp</dimen>
+
     <dimen name="explore_io_message_card_image_width">56dp</dimen>
     <dimen name="explore_io_message_card_min_button_width">48dp</dimen>
     <dimen name="explore_io_keynote_card_desc_padding">4dp</dimen>
@@ -64,4 +82,5 @@
     <dimen name="explore_io_keynote_card_padding_end">16dp</dimen>
     <dimen name="explore_io_theme_cards_session_image_width">112dp</dimen>
 
+    <dimen name="my_schedule_page_margin">@dimen/padding_normal</dimen>
 </resources>

@@ -23,6 +23,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".myschedule.MyScheduleActivity"
+            android:label="@string/title_my_schedule"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.YaLinIO.WithNavDrawer"
+            android:parentActivityName=".explore.ExploreIOActivity"
+            android:exported="true">
+
+
+        </activity>
+
         <activity
             android:name=".welcome.WelcomeActivity"
             android:exported="false"

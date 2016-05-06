@@ -4,6 +4,7 @@
         <attr name="actionBarIconColor" format="color" />
         <attr name="actionBarInsetStart" format="dimension" />
         <attr name="spinnerBarInsetStart" format="dimension" />
+        <attr name="photoItemForeground" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="DrawShadowFrameLayout">
@@ -22,5 +23,23 @@
 
     <declare-styleable name="ThemeYaLinIO">
         <attr name="isFloatingWindow" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ScrimInsetsScrollView">
+        <attr name="appInsetForeground" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="BezelImageView">
+        <attr name="maskDrawable" format="reference" />
+        <attr name="borderDrawable" format="reference" />
+        <attr name="desaturateOnPress" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="NavDrawerItemView">
+        <attr name="iconTints" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiSwipeRefreshLayout">
+        <attr name="foreground" format="reference" />
     </declare-styleable>
 </resources>

@@ -31,6 +31,9 @@ public class SettingsUtils {
 
     public static final String PREF_LOCAL_TIMES = "pref_local_times";
 
+    public static final String PREF_WELCOME_DONE = "pref_welcome_done" +
+            CONFERENCE_YEAR_PREF_POSTFIX;
+
     public static boolean hasUserRefusedSignIn(final Context context) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         return sp.getBoolean(PREF_USER_REFUSED_SIGN_IN, false);
@@ -84,5 +87,15 @@ public class SettingsUtils {
     public static void markDeclinedWifiSetup(final Context context, boolean newValue) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         sp.edit().putBoolean(PREF_DECLINED_WIFI_SETUP, newValue).apply();
+    }
+
+    public static boolean isFirstRunProcessComplete(final Context context) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        return sp.getBoolean(PREF_WELCOME_DONE, false);
+    }
+
+    public static void markFirstRunProcessesDone(final Context context, boolean newValue) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        sp.edit().putBoolean(PREF_WELCOME_DONE, newValue).apply();
     }
 }

@@ -58,6 +58,11 @@ public class ExploreIOActivity extends BaseActivity {
         frame.setShadowVisible(shown, shown);
     }
 
+    @Override
+    protected int getSelfNavDrawerItem() {
+        return NAV_DRAWER_ITEM_EXPLORE;
+    }
+
     public void cardHeaderClicked(View view) {
         LOGD(TAG, "clicked: " + view + " " +
                 ((view != null) ? view.getTag() : ""));
