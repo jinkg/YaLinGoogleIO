@@ -11,8 +11,12 @@ import android.widget.TextView;
 
 import com.yalin.googleio.Config;
 import com.yalin.googleio.R;
+import com.yalin.googleio.model.ScheduleItem;
 import com.yalin.googleio.ui.BaseActivity;
 import com.yalin.googleio.util.SettingsUtils;
+
+import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * 作者：YaLin
@@ -77,7 +81,14 @@ public class MyScheduleActivity extends BaseActivity {
     }
 
     private void prepareDayZeroAdapter() {
-
+        ScheduleItem item = new ScheduleItem();
+        item.title = "Badge Pick-Up";
+        item.startTime = 1432742400000L;
+        item.endTime = 1432782000000L;
+        item.type = ScheduleItem.BREAK;
+        item.room = item.subtitle = "Registration Desk";
+        item.sessionType = ScheduleItem.SESSION_TYPE_MISC;
+        mDayZeroAdapter.updateItems(Collections.singletonList(item));
     }
 
     private class OurViewPagerAdapter extends FragmentPagerAdapter {

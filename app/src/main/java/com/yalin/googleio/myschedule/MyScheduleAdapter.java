@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.ListAdapter;
 
+import com.yalin.googleio.model.ScheduleItem;
 import com.yalin.googleio.util.LUtils;
+
+import java.util.List;
 
 /**
  * 作者：YaLin
@@ -81,6 +84,10 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
 
     @Override
     public void onMovedToScrapHeap(View view) {
+
+    }
+
+    public void updateItems(List<ScheduleItem> items) {
 
     }
 }
